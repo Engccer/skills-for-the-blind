@@ -1,6 +1,6 @@
 ---
 name: skills-for-the-blind
-description: 시각장애인 코딩 에이전트 사용자를 위한 스킬 번들 설치·설정·검증 오케스트레이터. 문서 읽기(docparse, hwpx-automation), 요약(abridge), 에이전트 응답 음성 듣기(agent-cli-tts-summary), 텍스트↔음성 변환(speech-toolkit) 5종을 한 번에 설치한다. 다음 요청에 사용: skills-for-the-blind 설치, 시각장애인용 스킬 셋업, 스크린 리더 사용자 에이전트 환경 구성, blind user agent setup. Install and configure the skills-for-the-blind bundle: five field-tested skills covering the full workflow of a blind screen-reader user working with coding agent CLIs.
+description: "시각장애인 코딩 에이전트 사용자를 위한 스킬 번들 설치·설정·검증 오케스트레이터. 문서 읽기(docparse, hwpx-automation), 요약(abridge), 에이전트 응답 음성 듣기(agent-cli-tts-summary), 텍스트↔음성 변환(speech-toolkit) 5종을 한 번에 설치한다. 다음 요청에 사용: skills-for-the-blind 설치, 시각장애인용 스킬 셋업, 스크린 리더 사용자 에이전트 환경 구성, blind user agent setup. Install and configure the skills-for-the-blind bundle: five field-tested skills covering the full workflow of a blind screen-reader user working with coding agent CLIs."
 license: MIT
 ---
 
