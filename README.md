@@ -16,6 +16,12 @@
 
 ## 설치
 
+### 필요한 것
+
+- **코딩 에이전트 CLI**: Claude Code, Codex, Antigravity 등 스킬(SKILL.md)을 인식하는 에이전트.
+- **Node.js**: 설치 명령이 Node.js에 포함된 `npx`로 실행된다. `node --version`으로 확인한다.
+- **Python 3.10 이상**: docparse·hwpx-automation·speech-toolkit의 스크립트와 agent-cli-tts-summary의 설치 보조 스크립트에 필요하다. 설치 자체는 Python 없이 끝나며, abridge와 agent-cli-tts-summary의 음성 재생 루프(OS 내장 음성)는 Python 없이 동작한다.
+
 가장 빠른 방법은 이 메타 저장소 하나만 설치하는 것이다:
 
 ```bash
@@ -66,6 +72,8 @@ This repository holds no functional code of its own. The actual work is done by 
 | [abridge](https://github.com/Engccer/abridge) | Condenses documents into tone-preserving, extractive summaries (shortening) | `npx skills add Engccer/abridge -g` |
 | [agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary) | Installs a hook that reads agent turn summaries aloud, in a selectable language (Korean by default) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | [speech-toolkit](https://github.com/Engccer/speech-toolkit) | Text-to-speech and speech-to-text scripts for narration, audiobooks, and transcription (speaking/listening) | `npx skills add Engccer/speech-toolkit -g` |
+
+**Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge plus agent-cli-tts-summary's playback loop (OS-native voices) run without it.
 
 **Install:**
 

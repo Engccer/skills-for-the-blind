@@ -22,6 +22,8 @@ license: MIT
 
 ## 전체 설치
 
+시작 전에 전제 런타임을 확인한다. 설치 명령은 Node.js에 포함된 `npx`로 실행되므로 `node --version`으로 Node.js가 있는지 먼저 확인하고, 없으면 사용자에게 Node.js 설치를 안내한 뒤 진행한다.
+
 이 스킬이 이미 설치되어 실행 중이라면(즉 이 SKILL.md가 트리거되었다면), 아래 다섯 명령을 순서대로 실행해 멤버 스킬을 모두 설치한다.
 
 ```bash
@@ -47,6 +49,7 @@ foreach ($repo in "docparse","hwpx-automation","abridge","agent-cli-tts-summary"
 1. 명령이 오류 없이 종료되었는가(설치 실패 시 저장소 이름 오타나 네트워크 문제를 먼저 의심).
 2. 스킬 디렉터리(예: `~/.claude/skills/docparse`)가 실제로 생성되었는가.
 3. 코딩 에이전트를 재시작하거나 새 세션을 시작하면 다섯 스킬의 트리거 문구(예: "PDF 파싱해줘", "원문 톤 살려서 요약해줘")에 반응하는가.
+4. `python --version`(없으면 `python3 --version`)으로 Python 3.10 이상이 있는지 확인해 결과를 함께 보고한다. Python이 없어도 설치 자체는 유효하지만, docparse·hwpx-automation·speech-toolkit을 처음 쓰기 전에 Python 설치가 필요함을 사용자에게 알린다.
 
 설치 자체는 API 키가 없어도 끝난다. 다만 클라우드 파서·TTS/STT 제공자를 실제로 호출하려면 아래 환경 변수가 필요하므로, 설치 직후 사용자가 어떤 기능을 쓸 계획인지 확인하고 필요한 키 발급을 안내한다.
 
