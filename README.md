@@ -28,7 +28,7 @@
 
 - **코딩 에이전트 CLI**: Claude Code, Codex, Antigravity 등 스킬(SKILL.md)을 인식하는 에이전트.
 - **Node.js**: 설치 명령이 Node.js에 포함된 `npx`로 실행된다. `node --version`으로 확인한다.
-- **Python 3.10 이상**: docparse·hwpx-automation·speech-toolkit의 스크립트와 agent-cli-tts-summary의 설치 보조 스크립트에 필요하다. 설치 자체는 Python 없이 끝나며, abridge와 agent-cli-tts-summary의 음성 재생 루프(OS 내장 음성)는 Python 없이 동작한다.
+- **Python 3.10 이상**: docparse·hwpx-automation·speech-toolkit의 스크립트, abridge의 선택적 오디오북 스크립트, agent-cli-tts-summary의 설치 보조 스크립트에 필요하다. 설치 자체는 Python 없이 끝나며, abridge의 요약 본체와 agent-cli-tts-summary의 음성 재생 루프(OS 내장 음성)는 Python 없이 동작한다.
 
 가장 빠른 방법은 이 메타 저장소 하나만 설치하는 것이다:
 
@@ -83,7 +83,7 @@ This repository holds no functional code of its own. The actual work is done by 
 
 **Supported OS:** all five skills are field-tested on Windows and macOS. Linux is untested: docparse, abridge, speech-toolkit, and hwpx-automation's read/edit/Pandoc paths are plain Python and should work there; HWP→HWPX conversion runs on any OS with JDK 21 (`convert/hwp2hwpx.bat` on Windows, `convert/hwp2hwpx.sh` on macOS/Linux); hwpx-automation's PDF/signature features require Windows + Hancom Office; and agent-cli-tts-summary ships Windows/macOS hook templates only (Linux has no built-in OS voice, so it is not supported).
 
-**Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge plus agent-cli-tts-summary's playback loop (OS-native voices) run without it.
+**Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, abridge's optional audiobook step, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge's core summarization plus agent-cli-tts-summary's playback loop (OS-native voices) run without it.
 
 **Install:**
 
