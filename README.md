@@ -14,6 +14,14 @@
 | **[agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary)** | 에이전트 턴 요약을 음성으로 듣기(TTS 훅 설치, 요약 언어 선택 가능·기본 한국어) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | **[speech-toolkit](https://github.com/Engccer/speech-toolkit)** | 텍스트↔음성 변환(TTS/STT), 오디오북·전사(말로 입력·듣기) | `npx skills add Engccer/speech-toolkit -g` |
 
+## 지원 OS
+
+다섯 스킬 모두 **Windows와 macOS에서 실사용으로 검증**했다. Linux는 별도로 검증하지 않았으며 경계는 다음과 같다.
+
+- docparse·abridge·speech-toolkit과 hwpx-automation의 읽기·편집·Pandoc 변환은 Python·클라우드 API 기반이라 Linux에서도 동작하는 구조다(미검증).
+- hwpx-automation의 HWP→HWPX 변환은 JDK 21만 있으면 세 OS 모두 가능하다(Windows `convert/hwp2hwpx.bat`, macOS/Linux `convert/hwp2hwpx.sh`). PDF 변환·서명 삽입·한컴 COM 자동화는 **Windows + 한컴오피스 전용**이다.
+- agent-cli-tts-summary는 Windows(SAPI)·macOS(`say`) 훅 템플릿을 제공한다. **Linux는 OS 내장 음성이 없어 지원하지 않는다.**
+
 ## 설치
 
 ### 필요한 것
@@ -72,6 +80,8 @@ This repository holds no functional code of its own. The actual work is done by 
 | [abridge](https://github.com/Engccer/abridge) | Condenses documents into tone-preserving, extractive summaries (shortening) | `npx skills add Engccer/abridge -g` |
 | [agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary) | Installs a hook that reads agent turn summaries aloud, in a selectable language (Korean by default) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | [speech-toolkit](https://github.com/Engccer/speech-toolkit) | Text-to-speech and speech-to-text scripts for narration, audiobooks, and transcription (speaking/listening) | `npx skills add Engccer/speech-toolkit -g` |
+
+**Supported OS:** all five skills are field-tested on Windows and macOS. Linux is untested: docparse, abridge, speech-toolkit, and hwpx-automation's read/edit/Pandoc paths are plain Python and should work there; HWP→HWPX conversion runs on any OS with JDK 21 (`convert/hwp2hwpx.bat` on Windows, `convert/hwp2hwpx.sh` on macOS/Linux); hwpx-automation's PDF/signature features require Windows + Hancom Office; and agent-cli-tts-summary ships Windows/macOS hook templates only (Linux has no built-in OS voice, so it is not supported).
 
 **Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge plus agent-cli-tts-summary's playback loop (OS-native voices) run without it.
 

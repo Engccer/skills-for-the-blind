@@ -20,6 +20,10 @@ license: MIT
 | **agent-cli-tts-summary** | 에이전트 턴 요약을 음성으로 듣기(TTS 훅 설치, 요약 언어 선택 가능·기본 한국어) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | **speech-toolkit** | 텍스트↔음성 변환(TTS/STT), 오디오북·전사(말로 입력·듣기) | `npx skills add Engccer/speech-toolkit -g` |
 
+## 지원 OS
+
+다섯 스킬 모두 Windows·macOS에서 검증됐다. Linux에서 설치를 요청받으면 설치는 그대로 진행하되 두 가지를 사용자에게 미리 알린다: agent-cli-tts-summary는 Linux용 훅 템플릿이 없어 동작하지 않고(OS 내장 음성 부재), hwpx-automation의 PDF 변환·서명 삽입은 Windows + 한컴오피스 전용이다(HWP→HWPX 변환은 `convert/hwp2hwpx.sh`로 가능). 나머지(docparse·abridge·speech-toolkit·hwpx-automation 읽기·편집)는 Linux에서도 동작하는 구조지만 미검증이다.
+
 ## 전체 설치
 
 시작 전에 전제 런타임을 확인한다. 설치 명령은 Node.js에 포함된 `npx`로 실행되므로 `node --version`으로 Node.js가 있는지 먼저 확인하고, 없으면 사용자에게 Node.js 설치를 안내한 뒤 진행한다.
