@@ -11,7 +11,7 @@
 | **[docparse](https://github.com/Engccer/docparse)** | PDF·이미지·스캔·HWPX 등 다양한 문서를 고품질 마크다운으로 파싱(읽기) | `npx skills add Engccer/docparse -g` |
 | **[hwpx-automation](https://github.com/Engccer/hwpx-automation)** | HWP/HWPX 문서 변환·편집·서명 이미지 삽입(쓰기·구조 조작) | `npx skills add Engccer/hwpx-automation -g` |
 | **[abridge](https://github.com/Engccer/abridge)** | 문서를 원문 톤을 살려 발췌형으로 압축(줄이기) | `npx skills add Engccer/abridge -g` |
-| **[agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary)** | 에이전트 턴 요약을 한국어 음성으로 듣기(TTS 훅 설치) | `npx skills add Engccer/agent-cli-tts-summary -g` |
+| **[agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary)** | 에이전트 턴 요약을 음성으로 듣기(TTS 훅 설치, 요약 언어 선택 가능·기본 한국어) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | **[speech-toolkit](https://github.com/Engccer/speech-toolkit)** | 텍스트↔음성 변환(TTS/STT), 오디오북·전사(말로 입력·듣기) | `npx skills add Engccer/speech-toolkit -g` |
 
 ## 설치
@@ -64,7 +64,7 @@ This repository holds no functional code of its own. The actual work is done by 
 | [docparse](https://github.com/Engccer/docparse) | Parses PDFs, images, scans, and HWPX files into high-quality Markdown (reading) | `npx skills add Engccer/docparse -g` |
 | [hwpx-automation](https://github.com/Engccer/hwpx-automation) | Converts, edits, and inserts signature images into HWP/HWPX documents (writing/structural edits) | `npx skills add Engccer/hwpx-automation -g` |
 | [abridge](https://github.com/Engccer/abridge) | Condenses documents into tone-preserving, extractive summaries (shortening) | `npx skills add Engccer/abridge -g` |
-| [agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary) | Installs a hook that reads agent turn summaries aloud in Korean (listening) | `npx skills add Engccer/agent-cli-tts-summary -g` |
+| [agent-cli-tts-summary](https://github.com/Engccer/agent-cli-tts-summary) | Installs a hook that reads agent turn summaries aloud, in a selectable language (Korean by default) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | [speech-toolkit](https://github.com/Engccer/speech-toolkit) | Text-to-speech and speech-to-text scripts for narration, audiobooks, and transcription (speaking/listening) | `npx skills add Engccer/speech-toolkit -g` |
 
 **Install:**

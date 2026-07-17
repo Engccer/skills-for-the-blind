@@ -17,7 +17,7 @@ license: MIT
 | **docparse** | PDF·이미지·스캔·HWPX 등 다양한 문서를 고품질 마크다운으로 파싱(읽기) | `npx skills add Engccer/docparse -g` |
 | **hwpx-automation** | HWP/HWPX 문서 변환·편집·서명 이미지 삽입(쓰기·구조 조작) | `npx skills add Engccer/hwpx-automation -g` |
 | **abridge** | 문서를 원문 톤을 살려 발췌형으로 압축(줄이기) | `npx skills add Engccer/abridge -g` |
-| **agent-cli-tts-summary** | 에이전트 턴 요약을 한국어 음성으로 듣기(TTS 훅 설치) | `npx skills add Engccer/agent-cli-tts-summary -g` |
+| **agent-cli-tts-summary** | 에이전트 턴 요약을 음성으로 듣기(TTS 훅 설치, 요약 언어 선택 가능·기본 한국어) | `npx skills add Engccer/agent-cli-tts-summary -g` |
 | **speech-toolkit** | 텍스트↔음성 변환(TTS/STT), 오디오북·전사(말로 입력·듣기) | `npx skills add Engccer/speech-toolkit -g` |
 
 ## 전체 설치
@@ -57,7 +57,7 @@ foreach ($repo in "docparse","hwpx-automation","abridge","agent-cli-tts-summary"
 | docparse | 로컬 파서(hwpx_local, opendataloader)는 무료·오프라인. 클라우드 파서는 실제로 호출한 것만 과금 | `LLAMAPARSE_API_KEY`, `UPSTAGE_API_KEY`, `GEMINI_API_KEY`, `MISTRAL_API_KEY`, `COREPIN_API_KEY`, `GOOGLE_VISION_API_KEY`(택1 이상, 무료 티어 존재) |
 | hwpx-automation | 전부 무료·로컬 실행. HWP→HWPX 변환은 Java, PDF 변환·서명 삽입은 Windows+한컴오피스 필요(둘 다 API 비용 없음) | 없음 |
 | abridge | 요약 자체는 에이전트가 직접 수행하므로 무료. 선택적 오디오북 생성 단계에서만 유료 API 호출 | `ELEVENLABS_API_KEY`(오디오북 선택 시에만) |
-| agent-cli-tts-summary | 기본값인 OS 내장 음성(Windows SAPI, macOS `say`)은 무료. 선택적 클라우드 음성 provider만 과금 | `GEMINI_API_KEY`(선택적 provider) |
+| agent-cli-tts-summary | 기본값인 OS 내장 음성(Windows SAPI, macOS `say`)은 무료. 선택적 클라우드 음성 provider만 과금 | `GEMINI_API_KEY` 또는 `ELEVENLABS_API_KEY`(선택적 provider) |
 | speech-toolkit | 스크립트별 클라우드 API 종량 과금(제공자마다 무료 티어 존재) | `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ELEVENLABS_API_KEY`, `SPEECHIFY_API_KEY`, `DEEPGRAM_API_KEY`, `DAGLO_API_KEY`, `MISTRAL_API_KEY`(사용할 스크립트에 필요한 것만) |
 
 각 환경 변수는 사용자 셸이나 시스템 환경 변수로만 설정한다. 어떤 스크립트에도 키를 하드코딩하지 않는다. 무료로만 쓰고 싶다면 docparse의 로컬 파서(hwpx_local, opendataloader)와 hwpx-automation, agent-cli-tts-summary의 OS 내장 음성만으로도 "문서 읽기 → 편집 → 요약 → 음성으로 듣기"의 핵심 루프가 동작한다.
