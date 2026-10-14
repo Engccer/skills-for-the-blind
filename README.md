@@ -1,6 +1,6 @@
 # skills-for-the-blind
 
-시각장애인 스크린 리더 사용자가 코딩 에이전트 CLI(Claude Code, Codex, Antigravity 등)로 일하는 전체 루프를 한 번에 갖추기 위한 스킬 번들이다. 문서를 읽고(docparse, hwpx-automation), 줄이고(abridge), 듣고(agent-cli-tts-summary), 말로 입력한다(speech-toolkit). 다섯 스킬 모두 시각장애인 저자가 실무에서 검증했다.
+시각장애인 스크린 리더 사용자가 코딩 에이전트 CLI(Claude Code, Codex, Antigravity 등)로 일하는 전체 루프를 한 번에 갖추기 위한 스킬 번들이다. 문서를 읽고(docparse, hwpx-automation), 줄이고(abridge), 듣고(agent-cli-tts-summary), 말로 입력한다(speech-toolkit). 다섯 스킬 모두 시각장애인 저자가 실무에서 검증했다. <!-- sanitize: allow 설치 대상 안내 -->
 
 이 저장소 자체에는 기능 코드가 없다. 실제 동작은 다섯 개의 독립 공개 저장소가 각각 담당하며, 여기서는 그것들을 한 번에 설치·점검하는 얇은 오케스트레이터 스킬(`SKILL.md`)만 제공한다. 각 멤버 스킬은 이 번들 없이도 독립적으로 설치해 쓸 수 있고, 반대로 이 번들을 설치하면 다섯 개를 한 번에 갖출 수 있다.
 
@@ -26,7 +26,7 @@
 
 ### 필요한 것
 
-- **코딩 에이전트 CLI**: Claude Code, Codex, Antigravity 등 스킬(SKILL.md)을 인식하는 에이전트.
+- **코딩 에이전트 CLI**: Claude Code, Codex, Antigravity 등 스킬(SKILL.md)을 인식하는 에이전트. <!-- sanitize: allow 설치 대상 안내 -->
 - **Node.js**: 설치 명령이 Node.js에 포함된 `npx`로 실행된다. `node --version`으로 확인한다.
 - **Python 3.10 이상**: docparse·hwpx-automation·speech-toolkit의 스크립트, abridge의 선택적 오디오북 스크립트, agent-cli-tts-summary의 설치 보조 스크립트에 필요하다. 설치 자체는 Python 없이 끝나며, abridge의 요약 본체와 agent-cli-tts-summary의 음성 재생 루프(OS 내장 음성)는 Python 없이 동작한다.
 
@@ -67,7 +67,7 @@ MIT (c) 2026 Engccer
 
 ## English
 
-skills-for-the-blind is a skill bundle that gives a blind screen-reader user working with coding agent CLIs (Claude Code, Codex, Antigravity, and similar) the full workflow in one install: read documents (docparse, hwpx-automation), condense them (abridge), listen to agent replies (agent-cli-tts-summary), and speak instead of type (speech-toolkit). All five skills have been field-tested by a blind author in real work.
+skills-for-the-blind is a skill bundle that gives a blind screen-reader user working with coding agent CLIs (Claude Code, Codex, Antigravity, and similar) the full workflow in one install: read documents (docparse, hwpx-automation), condense them (abridge), listen to agent replies (agent-cli-tts-summary), and speak instead of type (speech-toolkit). All five skills have been field-tested by a blind author in real work. <!-- sanitize: allow 설치 대상 안내 -->
 
 This repository holds no functional code of its own. The actual work is done by five independent public repositories; this repo is only a thin orchestrator skill (`SKILL.md`) that installs and verifies all five in one pass. Each member skill also works standalone without this bundle, and installing this bundle pulls in all five at once.
 
@@ -83,7 +83,7 @@ This repository holds no functional code of its own. The actual work is done by 
 
 **Supported OS:** all five skills are field-tested on Windows and macOS. Linux is untested: docparse, abridge, speech-toolkit, and hwpx-automation's read/edit/Pandoc paths are plain Python and should work there; HWP→HWPX conversion runs on any OS with JDK 21 (`convert/hwp2hwpx.bat` on Windows, `convert/hwp2hwpx.sh` on macOS/Linux); hwpx-automation's PDF/signature features require Windows + Hancom Office; and agent-cli-tts-summary ships Windows/macOS hook templates only (Linux has no built-in OS voice, so it is not supported).
 
-**Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, abridge's optional audiobook step, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge's core summarization plus agent-cli-tts-summary's playback loop (OS-native voices) run without it.
+**Prerequisites:** a coding agent CLI that recognizes skills (Claude Code, Codex, Antigravity, or similar), Node.js (the installer runs through `npx`), and Python 3.10+ for the scripts used by docparse, hwpx-automation, speech-toolkit, abridge's optional audiobook step, and agent-cli-tts-summary's setup helpers. The install itself completes without Python, and abridge's core summarization plus agent-cli-tts-summary's playback loop (OS-native voices) run without it. <!-- sanitize: allow 설치 대상 안내 -->
 
 **Install:**
 

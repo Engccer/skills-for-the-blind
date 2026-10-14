@@ -6,7 +6,7 @@ license: MIT
 
 # skills-for-the-blind
 
-시각장애인 스크린 리더 사용자가 코딩 에이전트 CLI(Claude Code, Codex, Antigravity 등)로 일하는 전체 루프를 덮는 스킬 번들이다: 문서를 읽고, 줄이고, 듣고, 말로 입력한다. 다섯 스킬 모두 시각장애인 저자가 실무에서 검증했다.
+시각장애인 스크린 리더 사용자가 코딩 에이전트 CLI(Claude Code, Codex, Antigravity 등)로 일하는 전체 루프를 덮는 스킬 번들이다: 문서를 읽고, 줄이고, 듣고, 말로 입력한다. 다섯 스킬 모두 시각장애인 저자가 실무에서 검증했다. <!-- sanitize: allow 설치 대상 안내 -->
 
 이 저장소 자체는 코드를 담지 않는 얇은 오케스트레이터다. 실제 기능은 아래 다섯 개의 독립 공개 저장소가 각각 담당하며, 이 스킬은 그것들을 한 번에 설치·점검·보고하는 역할만 한다.
 
@@ -51,7 +51,7 @@ foreach ($repo in "docparse","hwpx-automation","abridge","agent-cli-tts-summary"
 각 `npx skills add` 실행 후 다음을 확인해 보고한다:
 
 1. 명령이 오류 없이 종료되었는가(설치 실패 시 저장소 이름 오타나 네트워크 문제를 먼저 의심).
-2. 스킬 디렉터리(예: `~/.claude/skills/docparse`)가 실제로 생성되었는가.
+2. 스킬 디렉터리(예: `~/.claude/skills/docparse`)가 실제로 생성되었는가. <!-- sanitize: allow 설치 경로 예시 -->
 3. 코딩 에이전트를 재시작하거나 새 세션을 시작하면 다섯 스킬의 트리거 문구(예: "PDF 파싱해줘", "원문 톤 살려서 요약해줘")에 반응하는가.
 4. `python --version`(없으면 `python3 --version`)으로 Python 3.10 이상이 있는지 확인해 결과를 함께 보고한다. Python이 없어도 설치 자체는 유효하지만, docparse·hwpx-automation·speech-toolkit을 처음 쓰기 전에 Python 설치가 필요함을 사용자에게 알린다.
 
